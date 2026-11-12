@@ -1,0 +1,76 @@
+{
+  "_comment": "CampusCharge 配置。敏感项建议用环境变量覆盖。",
+  "server": {
+    "addr": ":8080",
+    "readTimeoutSec": 30,
+    "writeTimeoutSec": 30
+  },
+  "collect": {
+    "centerLng": 112.42926,
+    "centerLat": 34.601036,
+    "radiusMeters": 10000,
+    "pageSize": 10,
+    "maxPages": 20,
+    "dedupeMeters": 30,
+    "cacheTTLSec": 90,
+    "intervalSec": 60
+  },
+  "mysql": {
+    "_comment": "留空则不落库，纯内存运行",
+    "dsn": ""
+  },
+  "providers": {
+    "cdz": {
+      "_comment": "Cookie 可选。该平台链路抖动，带有效 JSESSIONID 成功率更高",
+      "cookie": "JSESSIONID=510944360A77F2FB36D63D7B34DC583D; AppName=%u7535%u52A8%u81EA%u884C%u8F66%u667A%u80FD%u5145%u7535%u7CFB%u7EDF; UArealanstr=zh; AppUAreab_mode=0; ChargeCarb_cz=; SERVERID=b79322cb9c9e5e22c90493189b2c4678|1794487802|1794487691"
+    },
+    "zzsx": {
+      "srcId": 27,
+      "userId": 717045
+    },
+    "isfdz": {
+      "_comment": "密钥提取自前端 index.b33cbc57.js，明文硬编码，不过期",
+      "appId": "1ff95d3fcfe75503",
+      "appSecret": "52aa28131ff95d3fcfe75503d9531ae8",
+      "campusTplId": 10810,
+      "enumMax": 3600,
+      "devices": [
+        "2DL00000107",
+        "2DL00000112",
+        "2DL00000154",
+        "2DL00000176",
+        "2DL00000187",
+        "2DL00000188",
+        "2DL00000222",
+        "2DL00001308",
+        "2DL00001309",
+        "2DL00001326",
+        "2DL00001334",
+        "2DL00001341",
+        "2DL00001344",
+        "2DL00001424"
+      ]
+    },
+    "leyaoyao": {
+      "_comment": "JWT 会过期，用环境变量 LEYAOYAO_AUTH 覆盖",
+      "authorization": "eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiIyMDkzNTIxMDYwIiwic3ViIjoie1widXNlcm5hbWVcIjpcIlwiLFwic291cmNlXCI6XCJjdXN0b21lclwiLFwidXNlclwiOjIwOTM1MjEwNjAsXCJtZXJjaGFudFVzZXJJZFwiOjE1NjU0NTM0MTIwNTIyMjYwNDgsXCJtZXJjaGFudElkXCI6MjA0NzEwOCxcImFjdGl2YXRpb25cIjpcIllcIn0iLCJpc3MiOiJsZXlhb3lhbyIsImNvbXBhbnkiOiJsZXlhb3lhbyIsImV4cCI6MTc5NDUwMjcyMSwiaWF0IjoxNzk0NDk1NTIxLCJqdGkiOiIyMDkzNTIxMDYwIn0.Yhm0NV_YwWmzHhAw108Sq-_ZcclyA1dDQVfsDVRY4-c",
+      "stationId": "2091328",
+      "devices": [
+        "87140285",
+        "87140295",
+        "87140289"
+      ],
+      "stationIds": [
+        "1717331",
+        "1717526",
+        "2035535",
+        "2036436",
+        "2036437",
+        "2036733",
+        "2036735",
+        "2091327",
+        "2091328"
+      ]
+    }
+  }
+}
